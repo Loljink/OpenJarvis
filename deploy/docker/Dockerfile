@@ -77,6 +77,9 @@ RUN groupadd --system --gid 10001 openjarvis && \
         --create-home --home-dir /home/openjarvis openjarvis
 ENV HOME=/home/openjarvis
 USER openjarvis
+RUN mkdir -p /home/openjarvis/.openjarvis && \
+    printf 'default_model: "gemini-1.5-pro"\ninference_source: "cloud"\n' > /home/openjarvis/.openjarvis/config.yaml
+
 ENV GEMINI_API_KEY="AIzaSyDFY1qbFoMWlWlTotH7WgWJzJ0odbCYvzk"
 EXPOSE 8000
 
