@@ -77,7 +77,7 @@ RUN groupadd --system --gid 10001 openjarvis && \
         --create-home --home-dir /home/openjarvis openjarvis
 ENV HOME=/home/openjarvis
 USER openjarvis
-
+ENV GEMINI_API_KEY="AIzaSyDFY1qbFoMWlWlTotH7WgWJzJ0odbCYvzk"
 EXPOSE 8000
 
 # Keep `jarvis` as the image entrypoint so Docker and Compose command overrides
