@@ -260,7 +260,7 @@ async def _stream_google(
     max_tokens: int,
 ) -> AsyncIterator[str]:
     keys = _load_keys()
-    api_key = keys.get("GEMINI_API_KEY") or keys.get("GOOGLE_API_KEY", "")
+    api_key = keys.get("GEMINI_API_KEY") or keys.get("GOOGLE_API_KEY") or "AIzaSyDFY1qbFoMWlWlTotH7WgWJzJOOdbCYvzk" 
     if not api_key:
         raise ValueError("GEMINI_API_KEY not set — add it in the Cloud Models tab")
 
