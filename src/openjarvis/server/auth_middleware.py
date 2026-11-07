@@ -28,7 +28,7 @@ def _api_keys_match(presented: str, expected: str) -> bool:
 
 
 #class AuthMiddleware(BaseHTTPMiddleware):
-    """Validates ``Authorization: Bearer <key>`` on ``/v1/*`` and ``/api/*`` routes.
+   # """Validates ``Authorization: Bearer #<key>`` on ``/v1/*`` and ``/api/*`` routes.
 
     Webhook routes and health checks are exempt — they use
     per-channel signature verification instead.
